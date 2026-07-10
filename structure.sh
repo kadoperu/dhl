@@ -39,28 +39,32 @@ directories=(
 files=(
     "log"
     "log_human"
-    "src/agents/bills/nodes/transfer/agent.py"
-    "src/agents/bills/nodes/transfer/state.py"
+
+    "src/agents/bills/state.py"
+    "src/agents/bills/agent.py"
+
+    "src/agents/bills/nodes/transfer/nodo.py"
+    "src/agents/bills/nodes/transfer/prompt.py"
     "src/agents/bills/nodes/transfer/tools.py"
 
-    "src/agents/bills/nodes/OCR/agent.py"
-    "src/agents/bills/nodes/OCR/state.py"
+    "src/agents/bills/nodes/OCR/nodo.py"
+    "src/agents/bills/nodes/OCR/prompt.py"
     "src/agents/bills/nodes/OCR/tools.py"
 
-    "src/agents/bills/nodes/LLM/agent.py"
-    "src/agents/bills/nodes/LLM/state.py"
+    "src/agents/bills/nodes/LLM/nodo.py"
+    "src/agents/bills/nodes/LLM/prompt.py"
     "src/agents/bills/nodes/LLM/tools.py"
 
-    "src/agents/bills/nodes/check_integrity_bill/agent.py"
-    "src/agents/bills/nodes/check_integrity_bill/state.py"
+    "src/agents/bills/nodes/check_integrity_bill/nodo.py"
+    "src/agents/bills/nodes/check_integrity_bill/prompt.py"
     "src/agents/bills/nodes/check_integrity_bill/tools.py"
 
-    "src/agents/bills/nodes/VLM/agent.py"
-    "src/agents/bills/nodes/VLM/state.py"
+    "src/agents/bills/nodes/VLM/nodo.py"
+    "src/agents/bills/nodes/VLM/prompt.py"
     "src/agents/bills/nodes/VLM/tools.py"
 
-    "src/agents/bills/nodes/parsing/agent.py"
-    "src/agents/bills/nodes/parsing/state.py"
+    "src/agents/bills/nodes/parsing/nodo.py"
+    "src/agents/bills/nodes/parsing/prompt.py"
     "src/agents/bills/nodes/parsing/tools.py"
 
     "src/agents/bills/routes/intent/route.py"
