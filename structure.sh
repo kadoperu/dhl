@@ -39,46 +39,46 @@ directories=(
 files=(
     "log"
     "log_human"
-    "src/agents/bills/transfer/agent.py"
-    "src/agents/bills/transfer/state.py"
-    "src/agents/bills/transfer/tools.py"
+    "src/agents/bills/nodes/transfer/agent.py"
+    "src/agents/bills/nodes/transfer/state.py"
+    "src/agents/bills/nodes/transfer/tools.py"
 
-    "src/agents/bills/OCR/agent.py"
-    "src/agents/bills/OCR/state.py"
-    "src/agents/bills/OCR/tools.py"
+    "src/agents/bills/nodes/OCR/agent.py"
+    "src/agents/bills/nodes/OCR/state.py"
+    "src/agents/bills/nodes/OCR/tools.py"
 
-    "src/agents/bills/LLM/agent.py"
-    "src/agents/bills/LLM/state.py"
-    "src/agents/bills/LLM/tools.py"
+    "src/agents/bills/nodes/LLM/agent.py"
+    "src/agents/bills/nodes/LLM/state.py"
+    "src/agents/bills/nodes/LLM/tools.py"
 
-    "src/agents/bills/check_integrity_bill/agent.py"
-    "src/agents/bills/check_integrity_bill/state.py"
-    "src/agents/bills/check_integrity_bill/tools.py"
+    "src/agents/bills/nodes/check_integrity_bill/agent.py"
+    "src/agents/bills/nodes/check_integrity_bill/state.py"
+    "src/agents/bills/nodes/check_integrity_bill/tools.py"
 
-    "src/agents/bills/VLM/agent.py"
-    "src/agents/bills/VLM/state.py"
-    "src/agents/bills/VLM/tools.py"
+    "src/agents/bills/nodes/VLM/agent.py"
+    "src/agents/bills/nodes/VLM/state.py"
+    "src/agents/bills/nodes/VLM/tools.py"
 
-    "src/agents/bills/parsing/agent.py"
-    "src/agents/bills/parsing/state.py"
-    "src/agents/bills/parsing/tools.py"
+    "src/agents/bills/nodes/parsing/agent.py"
+    "src/agents/bills/nodes/parsing/state.py"
+    "src/agents/bills/nodes/parsing/tools.py"
 
-    "src/agents/bills/routes/intent/agent.py"
+    "src/agents/bills/routes/intent/route.py"
 )
 
-echo "Creando estructura del proyecto: ${pwd}"
-exit
+echo "Creando estructura del proyecto: $(pwd)"
+
 
 for directory in "${directories[@]}"; do
-    mkdir -p "{pwd}$directory"
+    mkdir -p "$(pwd)/$directory"
 done
 
-for file in "{pwd}/${files[@]}"; do
-    touch "$file"
+for file in "${files[@]}"; do
+    touch "$(pwd)/$file"
 done
 
 # Crear __init__.py en src y en todos sus subdirectorios.
-find "{pwd}/src" -type d -exec touch {}/__init__.py \;
+find "$(pwd)/src" -type d -exec touch {}/__init__.py \;
 
 echo
 echo "Estructura creada correctamente:"
