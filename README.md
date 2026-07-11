@@ -13,8 +13,8 @@ uv init
 uv venv .venv
 
 # add dependencies
-uv add --pre langgraph langchain langchain-openai
-uv add --pre langchain-anthropic
+uv add langgraph langchain langchain-openai
+uv add langchain-anthropic
 uv add "fastapi[standard]"
 
 # add dev dependencies
@@ -50,24 +50,7 @@ git branch -M main
 git push -u origin main
 
 # Estructura
+bash structure.sh
 
 
 
-cd workdir
-mkdir notebooks
-mkdir src
-    touch src/__init__.py
-mkdir -p src/agents/
-    touch src/agents/__init__.py
-mkdir -p src/agents/bills
-    touch src/agents/bills/__init__.py
-mkdir -p src/agents/bills/nodes
-    touch src/agents/bills/nodes/__init__.py
-mkdir -p src/agents/bills/nodes/serial
-    touch src/agents/bills/nodes/serial/__init__.py
-
-mkdir -p src/agents/bills/nodes/batch_read
-    touch src/agents/bills/nodes/serial/__init__.py
-
-mkdir -p src/agents/bills/routes
-    touch src/agents/bills/routes/__init__.py
